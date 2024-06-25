@@ -130,7 +130,7 @@ jobs:
 
     - name: Check release version
       id: checkReleaseVersion
-      uses: actions/github-script@v3.1.0
+      uses: actions/github-script@v6
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
