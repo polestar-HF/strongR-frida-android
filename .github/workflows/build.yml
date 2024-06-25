@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Pull Frida Latest Release
         id: pullFridaLatestRelease
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -29,7 +29,7 @@ jobs:
             core.setOutput('FRIDA_VERSION', ver);
       - name: Check release version
         id: checkReleaseVersion
-        uses: actions/github-script@v3.1.0
+        uses: actions/github-script@v6
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
