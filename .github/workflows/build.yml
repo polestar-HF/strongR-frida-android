@@ -23,7 +23,6 @@ jobs:
               owner: 'frida',
               repo: 'frida',
             })
-            console.log("releaseResponse: " + releaseResponse)
             const {
               data: { tag_name: 16.3.3 }
             } = releaseResponse;
