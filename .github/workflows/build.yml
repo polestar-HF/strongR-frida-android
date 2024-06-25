@@ -19,6 +19,8 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const github = require('@actions/github');
+            const core = require('@actions/core');
             const releaseResponse = await github.repos.getLatestRelease({
               owner: 'frida',
               repo: 'frida',
