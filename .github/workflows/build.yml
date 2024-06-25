@@ -23,10 +23,10 @@ jobs:
               owner: 'frida',
               repo: 'frida',
             })
-            console.log(releaseResponse)
+            console.log("releaseResponse: " + releaseResponse)
             const {
               data: { tag_name: ver }
-            } = releaseResponse;
+            } = releaseResponse.data;
             core.setOutput('FRIDA_VERSION', ver);
       - name: Check release version
         id: checkReleaseVersion
